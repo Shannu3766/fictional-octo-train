@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vidhya/screens/login.dart';
 
-class HomeScreen extends StatelessWidget {
+class Entryscreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

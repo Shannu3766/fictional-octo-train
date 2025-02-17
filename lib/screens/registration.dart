@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vidhya/screens/home.dart';
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({super.key});
@@ -29,12 +30,17 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
   // Sign Up logic
   void _signUp() {
-    if (_formKey.currentState!.validate()) {
+    // if (_formKey.currentState!.validate()) {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (context) => const HomeScreen(),
+        ),
+      );
       // TODO: Implement your sign-up logic here
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Sign Up successful!')),
       );
-    }
+    // }
   }
 
   @override
@@ -84,13 +90,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       end: Alignment.bottomRight,
                     ),
                   ),
-                  child: const Center(
-                    child: Icon(
-                      Icons.book,
-                      size: 60,
-                      color: Colors.white,
-                    ),
-                  ),
+                  child: Center(child: Image.asset("assets/images/icon.png")),
                 ),
                 const SizedBox(height: 30),
 

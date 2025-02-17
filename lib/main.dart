@@ -1,7 +1,9 @@
 import 'package:firebase_dart/core.dart' as firebase_dart;
 import 'package:flutter/material.dart';
-import 'package:vidhya/screens/Entryscreen.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:vidhya/screens/Entryscreen.dart';
+import 'package:vidhya/screens/home.dart';
+import 'package:vidhya/screens/lessonscreen.dart';
 import 'package:vidhya/screens/registration.dart';
 
 void main() {
@@ -19,14 +21,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        home:
-            // HomeScreen()
-            RegistrationScreen());
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home:
+          // HomeScreen()
+          // RegistrationScreen()
+          // HomeScreen(),
+          // LessonScreen()
+          Entryscreen()
+    );
+    // );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vidhya/screens/home.dart';
 import 'package:vidhya/screens/signin.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -23,13 +24,18 @@ class _LoginScreenState extends State<LoginScreen> {
 
   /// Handles login when the button is pressed
   void _login() {
-    if (_formKey.currentState!.validate()) {
-      // If all fields pass validation, proceed with your login logic here.
-      // e.g., call an API, navigate to another screen, etc.
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Login successful')),
-      );
-    }
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(
+        builder: (context) => const HomeScreen(),
+      ),
+    );
+    // if (_formKey.currentState!.validate()) {
+    //   // If all fields pass validation, proceed with your login logic here.
+    //   // e.g., call an API, navigate to another screen, etc.
+    //   ScaffoldMessenger.of(context).showSnackBar(
+    //     const SnackBar(content: Text('Login successful')),
+    //   );
+    // }
   }
 
   @override
